@@ -5,10 +5,24 @@
       "name": "First User"
     },
     {
-      "id": "fd21",
-      "name": "Nelson Hickle"
+      "id": "b3d9",
+      "name": "Kathleen Reilly"
+    },
+    {
+      "id": "5bda",
+      "name": "Luke Romaguera"
+    },
+    {
+      "id": "e89d",
+      "name": "Bobbie Blick"
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Some Album",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
