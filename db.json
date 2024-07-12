@@ -22,6 +22,31 @@
       "id": 1,
       "title": "Some Album",
       "userId": 1
+    },
+    {
+      "id": "2461",
+      "userId": 1,
+      "title": "Tasty Metal Pants"
+    },
+    {
+      "id": "765e",
+      "userId": 1,
+      "title": "Recycled Soft Bacon"
+    },
+    {
+      "id": "739f",
+      "userId": 1,
+      "title": "Fantastic Metal Chips"
+    },
+    {
+      "id": "ad3d",
+      "userId": 1,
+      "title": "Refined Metal Cheese"
+    },
+    {
+      "id": "1a86",
+      "userId": 1,
+      "title": "Generic Soft Pants"
     }
   ],
   "photos": []
