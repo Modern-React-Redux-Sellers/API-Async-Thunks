@@ -1,13 +1,38 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 import {faker} from "@faker-js/faker";
 
+//Development only
+const pause = (duration) => {
+    return new Promise((resolve) => {
+        setTimeout(resolve, duration)
+    })
+};
+
+
 const albumsApi = createApi({
     reducerPath: 'albums', //where in big state this will be tied to
     baseQuery: fetchBaseQuery({
-            baseUrl: 'http://localhost:3005'
+            baseUrl: 'http://localhost:3005',
+            //remove for Production, fake loading
+            fetchFn: async (...args) => {
+                await pause(1000);
+                return fetch(...args);
+            }
     }), //where request is being sent
     endpoints(builder) {
         return {
+            removeAlbum:builder.mutation({
+                //invalidates data with tag Album after running delete query using albums userID to delete album
+                invalidatesTags:(result, error, album) => {
+                    return [{type: 'Album', id: album.userId}];
+                },
+                query: (album) => {
+                    return {
+                        url: `/albums/${album.id}`,
+                        method: 'DELETE',
+                    };
+                },
+            }),
             addAlbum: builder.mutation({
                 //invalidates all Tags of 'Albums' and forces a re-query of data
                 //for only specific user
@@ -46,5 +71,5 @@ const albumsApi = createApi({
     }
 });
 
-export const { useFetchAlbumsQuery , useAddAlbumMutation} = albumsApi;
+export const { useFetchAlbumsQuery , useAddAlbumMutation, useRemoveAlbumMutation} = albumsApi;
 export {albumsApi};

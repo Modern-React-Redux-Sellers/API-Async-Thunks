@@ -5,39 +5,15 @@
       "name": "First User"
     },
     {
-      "id": "b3d9",
-      "name": "Kathleen Reilly"
+      "id": "4962",
+      "name": "Jodi Kreiger"
     },
     {
-      "id": "5bda",
-      "name": "Luke Romaguera"
-    },
-    {
-      "id": "4b5f",
-      "name": "Raymond Tromp"
+      "id": "85ae",
+      "name": "Edna McDermott"
     }
   ],
   "albums": [
-    {
-      "id": 1,
-      "title": "Some Album",
-      "userId": 1
-    },
-    {
-      "id": "2461",
-      "userId": 1,
-      "title": "Tasty Metal Pants"
-    },
-    {
-      "id": "765e",
-      "userId": 1,
-      "title": "Recycled Soft Bacon"
-    },
-    {
-      "id": "739f",
-      "userId": 1,
-      "title": "Fantastic Metal Chips"
-    },
     {
       "id": "ad3d",
       "userId": 1,
@@ -49,14 +25,19 @@
       "title": "Generic Soft Pants"
     },
     {
-      "id": "e248",
-      "userId": "b3d9",
-      "title": "Intelligent Concrete Computer"
+      "id": "312d",
+      "userId": 1,
+      "title": "Luxurious Soft Cheese"
     },
     {
-      "id": "2ef9",
-      "userId": "5bda",
-      "title": "Small Metal Sausages"
+      "id": "e778",
+      "userId": "85ae",
+      "title": "Practical Steel Tuna"
+    },
+    {
+      "id": "b989",
+      "userId": "4962",
+      "title": "Recycled Soft Fish"
     }
   ],
   "photos": []
