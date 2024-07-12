@@ -10,7 +10,10 @@ const albumsApi = createApi({
         return {
             addAlbum: builder.mutation({
                 //invalidates all Tags of 'Albums' and forces a re-query of data
-                invalidatesTags: ['Album'],
+                //for only specific user
+                invalidatesTags: (result, error, user) => {
+                    return [{type: 'Album', id: user.id}]
+                },
                 query: (user) => {
                     return {
                         url: '/albums',
@@ -25,7 +28,10 @@ const albumsApi = createApi({
             //fetchAlbums creates hook: useFetchAlbumsQuery
             fetchAlbums: builder.query({
                 //used as a reference to mark outOfDate data when adding new album
-                providesTags: ['Album'],
+                //for specific user
+                providesTags: (result, error, user) => {
+                    return [{type: 'Album', id: user.id}];
+                },
                 query: (user) => {
                     return {
                       url: '/albums',
