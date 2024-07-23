@@ -29,7 +29,7 @@ const photosApi = createApi({
                     };
                 }
             }),
-            removePhotos: builder.mutation({
+            removePhoto: builder.mutation({
                 query: (photo) => {
                     return {
                         method: 'DELETE',

@@ -45,5 +45,16 @@
       "title": "Tasty Soft Car"
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": "5988",
+      "albumId": "ad3d",
+      "url": "https://loremflickr.com/150/150/abstract?lock=4476"
+    },
+    {
+      "id": "90f8",
+      "albumId": "ad3d",
+      "url": "https://loremflickr.com/150/150/abstract?lock=81790"
+    }
+  ]
 }

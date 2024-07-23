@@ -11,8 +11,7 @@ export const store = configureStore({
         [photosApi.reducerPath]: photosApi.reducer
     },
     middleware: (getDefaultMiddleware) => {
-        return getDefaultMiddleware().concat(albumsApi.middleware)
-            .concat(photosApi.middleware)
+        return getDefaultMiddleware().concat(albumsApi.middleware).concat(photosApi.middleware)
     }
 });
 
